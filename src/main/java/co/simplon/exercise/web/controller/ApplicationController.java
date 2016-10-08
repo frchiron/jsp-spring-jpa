@@ -12,8 +12,8 @@ import java.util.Map;
 public class ApplicationController {
 
 
-    @RequestMapping(name = "/params", method = RequestMethod.GET)
-    public @ResponseBody Map<String, String> params() {
+    @RequestMapping(path = "/param", method = RequestMethod.GET)
+    public @ResponseBody Map<String, String> param() {
         Map<String, String> params = new HashMap<>();
         params.put("key1", "value1");
         params.put("key2", "value2");
