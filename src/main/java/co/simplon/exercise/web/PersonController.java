@@ -46,7 +46,12 @@ public class PersonController {
 	 * 
 	 * Path : DELETE /person/{name}/{surname}
 	 * 
-	 * Retour : la personne enlevé de la liste ou null si pas trouvé.
+	 * Retour : la personne enlevé de la liste ou un erreur 404 si pas trouvé.
+	 * 
+	 * NOTES : voir l'url
+	 * http://docs.spring.io/spring/docs/3.0.x/javadoc-api/org/springframework/web/bind/annotation/ResponseStatus.html
+	 * Avec un HttpStatus.NOT_FOUND
+	 * 
 	 */
 	public Person removePerson(String name, String surname) {
 		return null;
