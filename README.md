@@ -1,15 +1,15 @@
-## angular-spring-hibernate
+# angular-spring-hibernate
 
 Exercise pour créer une application WEB à partir de 0 en plusieurs étapes pour faire le CRUD d'un objet.
 
-# Pré-réquis
+## Pré-réquis
 
 * Java 8
 * Maven 3+
 * NPM
 * Bower
 
-# Déroulement
+## Déroulement
 
 Chaque étape est une branche git, pour la checkouter executer 
 
