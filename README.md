@@ -13,12 +13,12 @@ Exercise pour créer une application WEB à partir de 0 en plusieurs étapes pou
 
 Chaque étape est une branche git, pour la checkouter executer 
 
-`git checkout -b stepX remotes/origin/stepX`
+'git checkout -b stepX remotes/origin/stepX'
 
 Chercher dans le code les EXERCISES à faire (en commentaire). 
 ATTENTION : Avant de checkouter une nouvelle étape, n'oubliez pas de commiter en local vos modifications. Pour commiter la solution d'une étape X :
 
-`git commit -am "Solution stepX"`
+'git commit -am "Solution stepX"'
 
 AH! N'OUBLIEZ PAS VOS TESTS
 
