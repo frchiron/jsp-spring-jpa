@@ -13,7 +13,7 @@ import co.simplon.exercise.core.model.Person;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/person")
+@RequestMapping("/api/person")
 public class PersonController {
 
 	/**
