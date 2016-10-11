@@ -1,13 +1,23 @@
 package co.simplon.exercise.core.model;
 
-import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Person {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
 	private String name;
+
 	private String surname;
 
 	public Person() {
-		// TODO empty
+		// FOR HIBERNATE
 	}
 
 	public Person(String name, String surname) {
@@ -15,30 +25,16 @@ public class Person {
 		this.surname = surname;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getSurname() {
 		return surname;
-	}
-
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (obj == null || !(obj instanceof Person)) {
-			return false;
-		}
-
-		Person that = (Person) obj;
-		return Objects.equals(this.surname, that.surname) && Objects.equals(this.name, that.name);
 	}
 
 }
