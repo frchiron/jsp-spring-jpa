@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.simplon.exercise.core.model.Person;
+import co.simplon.exercise.web.exception.ResourceNotFoundException;
 
 @RestController
 @CrossOrigin
@@ -19,42 +21,24 @@ public class PersonController {
 	private static List<Person> persons = new ArrayList<>();
 
 	@RequestMapping
-	public Person person() {
-		return null;
+	public List<Person> person() {
+		return persons;
 	}
 
-	@RequestMapping(path = "/{name}/{surname}")
-	public Person person(@PathVariable String name, @PathVariable String surname) {
-		return new Person(name, surname);
-	}
-
-	/**
-	 * EXERCISE 3 : Ajouter un point d'entrée
-	 * 
-	 * Path : POST /person
-	 * 
-	 * Retour : ajoute la personne dans la liste persons et renvoie la position
-	 * dans la liste
-	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public int addPerson(Person person) {
-		return -1;
+	public @ResponseBody Person person(@RequestBody Person person) {
+		persons.add(person);
+		return person;
 	}
 
-	/**
-	 * EXERCISE 4 : Ajouter un point d'entrée
-	 * 
-	 * Path : DELETE /person/{name}/{surname}
-	 * 
-	 * Retour : la personne enlevé de la liste ou un erreur 404 si pas trouvé.
-	 * 
-	 * NOTES : voir l'url
-	 * http://docs.spring.io/spring/docs/3.0.x/javadoc-api/org/springframework/web/bind/annotation/ResponseStatus.html
-	 * Avec un HttpStatus.NOT_FOUND
-	 * 
-	 */
-	public Person removePerson(String name, String surname) {
-		return null;
+	@RequestMapping(method = RequestMethod.DELETE)
+	public @ResponseBody Person delete(@RequestBody Person person) {
+		if (persons.contains(person)) {
+			persons.remove(person);
+		} else {
+			throw new ResourceNotFoundException();
+		}
+		return person;
 	}
 
 }

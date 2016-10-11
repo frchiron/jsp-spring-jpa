@@ -1,5 +1,7 @@
 package co.simplon.exercise.core.model;
 
+import java.util.Objects;
+
 public class Person {
 	private String name;
 	private String surname;
@@ -27,6 +29,16 @@ public class Person {
 
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null || !(obj instanceof Person)) {
+			return false;
+		}
+
+		Person that = (Person) obj;
+		return Objects.equals(this.surname, that.surname) && Objects.equals(this.name, that.name);
 	}
 
 }
