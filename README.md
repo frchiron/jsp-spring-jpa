@@ -25,9 +25,14 @@ ATTENTION : Avant de checkouter une nouvelle étape, n'oubliez pas de commiter e
 git commit -am "Solution stepX"
 ```
 
-AH! N'OUBLIEZ PAS VOS TESTS
-
 NOTE : Le master est seulement pour la mise en place du projet.
+
+
+## Les étapes
+
+* Etape 1 : Ajout de points d'entrée REST via Spring
+* Etape 2 : Enrichissement des points d'entrée REST & Gestion de cas d'erreurs
+* Etape 3 : Mise en place de JPA via Spring Data, avec une base de données embarquée H2
 
 
 ## Références 
