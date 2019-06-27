@@ -18,6 +18,8 @@ public class PersonController {
 	/**
 	 * EXERCISE 5 : Changer le get pour aller récuperer les données de la base
 	 * de données en passant par le PersonService et le PersonRepository
+	 * Remarque : utiliser @Autowired de Spring correspond à @Inject de Java EE
+	 * l'API peut etre testé ensuite avec RestClient sous Chrome (http://localhots:8080/api/person)
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody List<Person> get() {
@@ -26,7 +28,7 @@ public class PersonController {
 
 	/**
 	 * EXERCISE 6 : Changer le post pour inserer une personne en base de données
-	 * de la base de données en passant par le PersonService et le
+	 * en passant par le PersonService et le
 	 * PersonRepository
 	 */
 	@RequestMapping(method = RequestMethod.POST)
