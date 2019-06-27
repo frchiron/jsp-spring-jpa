@@ -34,7 +34,7 @@ public class ApplicationController {
 	 * 
 	 * Retour : new Person(name, surname)
 	 * 
-	 * PISTE Voir Point 22.3.2 voir l'utilisation de @PathVariable
+	 * PISTE Voir  l'utilisation de @PathVariable
 	 * http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
 	 */
 	public Person person(String name, String surname) {
