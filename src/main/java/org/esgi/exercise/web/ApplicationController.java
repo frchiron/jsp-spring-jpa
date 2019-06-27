@@ -1,11 +1,11 @@
-package co.simplon.exercise.web;
+package org.esgi.exercise.web;
 
+import org.esgi.exercise.core.model.Person;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.simplon.exercise.core.model.Person;
 
 @RestController
 @CrossOrigin

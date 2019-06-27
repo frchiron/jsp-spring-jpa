@@ -5,7 +5,7 @@
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="mis" version="2.5">
 
-	<display-name>angular-spring-hibernate</display-name>
+	<display-name>jsp-spring-jpa</display-name>
 
 	<servlet>
 		<servlet-name>springmvc-servlet</servlet-name>

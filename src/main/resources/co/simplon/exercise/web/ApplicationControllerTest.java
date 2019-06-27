@@ -1,4 +1,4 @@
-package co.simplon.exercise.web;
+package org.esgi.exercise.web;
 
 import static org.junit.Assert.*;
 
