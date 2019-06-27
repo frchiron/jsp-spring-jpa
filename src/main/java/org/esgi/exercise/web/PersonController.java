@@ -51,6 +51,8 @@ public class PersonController {
 	 * NOTES : voir l'url
 	 * http://docs.spring.io/spring/docs/3.0.x/javadoc-api/org/springframework/web/bind/annotation/ResponseStatus.html
 	 * Avec un HttpStatus.NOT_FOUND
+     * et l'url https://www.baeldung.com/spring-mvc-controller-custom-http-status-code
+     * On peut par exemple retourner un code retour via une nouvelle exception
 	 * 
 	 */
 	public Person removePerson(String name, String surname) {
