@@ -1,4 +1,4 @@
-package co.simplon.exercise.core.model;
+package org.esgi.exercise.core.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

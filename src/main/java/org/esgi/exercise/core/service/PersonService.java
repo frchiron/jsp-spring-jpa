@@ -1,10 +1,10 @@
-package co.simplon.exercise.core.service;
+package org.esgi.exercise.core.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import co.simplon.exercise.core.model.Person;
+import org.esgi.exercise.core.model.Person;
 
 @Repository
 public class PersonService {
