@@ -8,7 +8,6 @@ Exercise pour créer des services REST via Spring avec mise en place de JPA
 
 * Java 8
 * Maven 3+
-* MySQL (Community Edition)
 
 ## Déroulement
 
